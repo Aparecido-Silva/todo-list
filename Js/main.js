@@ -13,7 +13,7 @@ form.addEventListener('submit', async (evento) => {
     const tarefaMaiuscula = tarefa.value.toUpperCase()
     const buscarTarefa = await listTask.find(e => e.nome == tarefaMaiuscula)
 
-    
+
     if (buscarTarefa) {
         alert("Essa tarefa já existe")
     }
@@ -21,12 +21,14 @@ form.addEventListener('submit', async (evento) => {
         alert("Não é possível criar uma tarefa vazia")
     }
     else {
+        valorId = listTask[listTask.length - 1] ? listTask.length : 0;
         const taskAtual = {
-            "nome": tarefaMaiuscula
+            "nome": tarefaMaiuscula,
+            "id": valorId
         }
         listTask.push(taskAtual)
-        localStorage.setItem('listTask', JSON.stringify(listTask))
         criaElemento(tarefaMaiuscula)
+        localStorage.setItem('listTask', JSON.stringify(listTask))
         tarefa.value = ''
     }
 
@@ -35,6 +37,7 @@ form.addEventListener('submit', async (evento) => {
 function criaElemento(tarefa) {
     const elemento = document.createElement('li')
     elemento.classList.add('list__task')
+
 
     const nomeElemento = document.createElement('p')
     nomeElemento.classList.add('task__name')
@@ -61,8 +64,9 @@ function buttonRemove() {
 }
 
 function removeElemento(tarefa, pai) {
+    const element = listTask.find(e => e.nome === tarefa)
     pai.remove()
-    listTask.splice(listTask.find(e => e.nome = tarefa), 1)
+    listTask.splice(listTask.findIndex(e => e.id === element.id), 1)
     localStorage.setItem('listTask', JSON.stringify(listTask))
 
     removeLista()
