@@ -17,7 +17,7 @@ form.addEventListener('submit', async (evento) => {
     if (buscarTarefa) {
         alert("Essa tarefa já existe")
     }
-    else if (tarefa === "") {
+    else if (tarefaMaiuscula == "") {
         alert("Não é possível criar uma tarefa vazia")
     }
     else {
