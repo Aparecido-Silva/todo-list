@@ -12,8 +12,8 @@
 ## -> Layout 📲
 <br>
 <div style=" width: 100%; display: flex; gap: 1rem;">
-  <img style="height: 300px; width: 430px;" src="https://github.com/Aparecido-Silva/todo-list/assets/122464888/fc145b04-b422-40db-9c67-616f6ac9eb15"/>
-  <img style="height: 300px; width: 430px;" src="https://github.com/Aparecido-Silva/todo-list/assets/122464888/65f866ae-38db-4440-a0bc-d556eb93197b"/>
+  <img style="height: 260px; width: 330px;" src="https://github.com/Aparecido-Silva/todo-list/assets/122464888/fc145b04-b422-40db-9c67-616f6ac9eb15"/>
+  <img style="height: 260px; width: 340px;" src="https://github.com/Aparecido-Silva/todo-list/assets/122464888/65f866ae-38db-4440-a0bc-d556eb93197b"/>
 </div>
 <br>
 
